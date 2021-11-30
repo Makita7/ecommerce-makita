@@ -22,7 +22,7 @@ const ItemDetail = ({ item, stock = 0 }) => {
                 ? //if
                 <p className="text-center">loading...</p> 
                 : //else
-                <div key={item.id}>
+                <div key={item.id} className="d-flex align-items-center text-center p-4 ">
                     <div className="prodCard">
                         <div className='card'>
                             <img src={item.img} className=" img-thumbnail" alt={item.name}/>
@@ -38,13 +38,12 @@ const ItemDetail = ({ item, stock = 0 }) => {
                     {
                         itemCount === 0
                         ? <ItemCount stock={item.stock} initial={itemCount} id={item.id} onAdd={onAdd}/>
-                        : <Link to='/Cart' style={{textDecoration: "none"}}><button variant="contained" color="secondary">Go to Cart</button></Link>
+                        : <Link to='/Cart' className=" p-4"><button type="button" className="btn btn-dark">Go to Cart</button></Link>
                     }
                 </div>
                 
             }
 
-            
         </>
     )
 

@@ -24,13 +24,13 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
 
         return(
 
-            <div className="productContainer text-center">
+            <div className="productContainer text-center p-4">
                 <div className="card__buttons">
                     <p className="card__products">Productos: {itemCount} / {stock}</p>
                     <button onClick={decrement} className="btn btn__count">-</button>
                     <button onClick={increment} className="btn btn__count"><img className="buttonSize" alt="add button" src={addButton}/></button>
                 </div>
-                <button onClick={onAdd} className="btn btn__addToCar" >Add to Cart</button>
+                <button onClick={onAdd} type="button" className="btn btn-dark" >Add to Cart</button>
             </div>
     )
 }

@@ -23,8 +23,10 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="d-flex flex-wrap">
-        <ItemList items={data} />
+      <div className="container">
+        <div className="row d-flex flex-wrap">
+          <ItemList items={data} />
+        </div>
       </div>
     </>
   );

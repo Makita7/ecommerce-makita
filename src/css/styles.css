@@ -40,6 +40,10 @@ html {
   justify-content: center;
 }
 
+.pLeft{
+  padding-left: 2rem;
+}
+
 body {
   position: relative;
   margin-bottom: 9rem;
@@ -72,10 +76,13 @@ body .card-title {
   padding-top: 1rem;
 }
 
+.row{
+  align-content: center;
+}
+
 body .card {
   height: 100%;
-  text-align: center;
-  width: 18 rem;
+  width: 16rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,6 +91,7 @@ body .card {
   border: 0px;
   background-color: rgba(245, 245, 245, 0);
 }
+
 
 body h1, body h2, body h3, body h4, body h5 {
   font-family: 'Comfortaa', cursive;
@@ -119,8 +127,7 @@ body .btn {
 }
 
 body .btn-primary, body .btn-info {
-  background-color: #E8A87C;
-  border: #031720;
+  background:rgba(255, 255, 255, 0);
 }
 
 body .btn-danger {
