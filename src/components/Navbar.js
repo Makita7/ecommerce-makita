@@ -17,7 +17,7 @@ function Navbar() {
         <div className="Right">
           <ul>
             <Link to="/">
-              <img src={img} class="btn imgHeader" alt="log in" />
+              <img src={img} className="btn imgHeader" alt="log in" />
             </Link>
             <Link to="/cart">
               <CartWidget />

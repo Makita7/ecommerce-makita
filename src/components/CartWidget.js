@@ -20,7 +20,7 @@ function CartWidget() {
         </Link>
       </div> */}
 
-      <button type="button" class="btn btn-primary position-relative">
+      <div type="button" className="btn btn-primary position-relative">
       <Link to="/Cart">
             <img
               src={bagIcon}
@@ -29,11 +29,11 @@ function CartWidget() {
               alt="bag"
             />
           </Link>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">  {test.calcItemsQty()}
-        <span class="visually-hidden">
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">  {test.calcItemsQty()}
+        <span className="visually-hidden">
           
         </span></span>
-      </button>
+      </div>
     </>
   );
 }

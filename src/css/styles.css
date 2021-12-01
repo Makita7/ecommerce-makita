@@ -40,6 +40,11 @@ html {
   justify-content: center;
 }
 
+.cartImg{
+  /* width: auto; */
+  height: 12rem;
+}
+
 .pLeft{
   padding-left: 2rem;
 }
@@ -70,6 +75,10 @@ body table {
 body .productsImg {
   max-height: auto;
   max-width: 7rem;
+}
+
+.ItemCount{
+  background-color: #ffffff;
 }
 
 body .card-title {

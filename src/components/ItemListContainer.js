@@ -11,7 +11,7 @@ const ItemListContainer = () => {
   //DidUpdate
   useEffect(() => {
     CustomFetch(
-      500,
+      1500,
       products.filter((item) => {
         if (idCategory === undefined) return item;
         return item.category === idCategory;

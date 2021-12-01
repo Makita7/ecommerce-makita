@@ -36,6 +36,14 @@ body table {
   font-family: 'Barlow', sans-serif;
 }
 
+.productContainer{
+  background-color: #ffffff;
+}
+
+.cartImg{
+  max-height: 16rem;
+}
+
 body .productsImg {
   max-height: auto;
   max-width: 7rem;

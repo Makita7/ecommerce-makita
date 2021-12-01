@@ -10,7 +10,10 @@ const ItemDetail = ({ item, stock = 0 }) => {
     const test = useContext(CartContext);
 
     const onAdd = (qty) => {
-        alert("You have selected " + item + " items.");
+        console.log(item);
+        console.log(qty);
+        
+        alert("You have selected " + qty + " items.");
         setItemCount(qty);
         test.addToCart(item, qty);
     }
