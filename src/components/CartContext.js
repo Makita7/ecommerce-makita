@@ -12,7 +12,8 @@ const CartContextProvider = ({ children }) => {
         ...cartList,
         {
           idItem: item.id,
-          nameItem: item.img,
+          imgItem: item.img,
+          nameItem: item.name,
           priceItem: item.price,
           qtyItem: qty,
         },
@@ -44,8 +45,8 @@ const CartContextProvider = ({ children }) => {
     return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue);
 }
 
-  const calcTaxes = () => {
-    return calcSubTotal() * 0.18;
+  const calcTax = () => {
+    return calcSubTotal() * 21;
 }
 
   const calcTotal = () => {
@@ -53,8 +54,8 @@ const CartContextProvider = ({ children }) => {
 }
 
   const calcItemsQty = () => {
-    let qtys = cartList.map(item => item.qtyItem);
-    return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    let quantities = cartList.map(item => item.qtyItem);
+    return quantities.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
 }
 
   return (
@@ -65,7 +66,7 @@ const CartContextProvider = ({ children }) => {
         deleteItem, 
         calcTotalPerItem, 
         calcSubTotal, 
-        calcTaxes, 
+        calcTax, 
         calcTotal,
         calcItemsQty
     }}>

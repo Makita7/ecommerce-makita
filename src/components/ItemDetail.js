@@ -26,7 +26,7 @@ const ItemDetail = ({ item, stock = 0 }) => {
                     <div className="prodCard">
                         <div className='card'>
                             <img src={item.img} className=" img-thumbnail" alt={item.name}/>
-                            <div clasName="card-body">
+                            <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
                                 <p className="card-text">{item.description}</p>
                                 <p>Stock: {item.stock}</p>

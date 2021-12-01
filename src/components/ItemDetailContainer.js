@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams();
 
     useEffect(() => {
-        CustomFetch(2000, products.find(item => item.id === parseInt(idItem)))
+        CustomFetch(1500, products.find(item => item.id === parseInt(idItem)))
         .then(result => setData(result))
         .catch(err => console.log(err))
     }, []);

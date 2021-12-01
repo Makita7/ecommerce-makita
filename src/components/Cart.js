@@ -62,7 +62,7 @@ const Cart = () => {
                                     <tr>
                                     <th scope="row">< FormatNumber number={test.calcSubTotal()}/></th>
                                     <td><FormatNumber number={test.calcSubTotal()} /></td>
-                                    <td><FormatNumber number={-test.calcTaxes()} /></td>
+                                    <td><FormatNumber number={-test.calcTax()} /></td>
                                     <td><FormatNumber number={test.calcTotal()} /></td>
                                     </tr>
                                 </tbody>
