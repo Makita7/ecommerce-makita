@@ -5,10 +5,6 @@ import { CartContext } from './CartContext';
 
 const Cart = () => {
     const test = useContext(CartContext);
-    console.log("Cart:", test);
-    console.log(test.calcSubTotal());
-    console.log(test.calcTax());
-    console.log(test.calcTotal());
     
     return( 
         <>

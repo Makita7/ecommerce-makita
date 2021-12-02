@@ -8,18 +8,6 @@ function CartWidget() {
 
   return (
     <>
-      {/* Old Cart Widget
-      <div badgeContent={test.calcItemsQty()} >
-        <Link to="/Cart">
-          <img
-            src={bagIcon}
-            type="button"
-            className="btn imgHeader headerIcons"
-            alt="bag"
-          />
-        </Link>
-      </div> */}
-
       <div type="button" className="btn btn-primary position-relative">
       <Link to="/Cart">
             <img

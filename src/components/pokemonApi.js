@@ -28,13 +28,6 @@ function Pokemon(){
                     : name.map((data) => <h5>{data.name}</h5>)
                 }
             </h4>
-            {/*<ol>
-                {
-                        error.isError
-                    ? <p>there was an error</p>
-                    : abilities.map((data) => <li>{data.ability.name}</li>)
-                }
-            </ol>*/}
         </>
     )
 }
