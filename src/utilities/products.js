@@ -7,6 +7,12 @@ import cofArabica from '../img/coffee_Arabica.png'
 import cofExcelsa from '../img/coffee_Excelsa.png'
 import cofLiberica from '../img/coffee_Liberica.png'
 import cofRobusta from '../img/coffee_Robusta.png'
+import berry from '../img/tea-berries.png'
+import cinnamon from '../img/tea-cinnamon.png'
+import green from '../img/tea-green.png'
+import sakura from '../img/tea-sakura.png'
+import mateO from '../img/mate-original.png'
+
 
 const products = [
     //Coffee Capsules - ID 11-19
@@ -122,26 +128,59 @@ const products = [
     //Tea Strands - ID 21-29 //
     {
         id: 21,
-        name: "Rosehip and Chamomile",
+        name: "Berry Tea",
         strength: 1,
-        description:"Single-origin coffees made from craft, small-batch roasters. With a more bitter profile, perfect for drinking with a splash of cream",
-        price:200,
-        img:"https://media.istockphoto.com/photos/coffee-cup-concept-message-picture-id825340486?b=1&k=20&m=825340486&s=170667a&w=0&h=xHF4mKNDYr_HGCFBlgEAb7P88X-w8DiHyzwyzG4LMT8=",
+        description:"Soft and sweet blend of berries and honey",
+        price:185,
+        img: berry,
         category:"TeaStrands",
         categoryId:3,
-        stock: 40,
+        stock: 12,
+    },
+    {
+        id: 22,
+        name: "Green Tea",
+        strength: 2,
+        description:"Traditional Matcha with japanese traditional style",
+        price:185,
+        img: green,
+        category:"TeaStrands",
+        categoryId:3,
+        stock: 35,
+    },
+    {
+        id: 23,
+        name: "Sakura Tea",
+        strength: 1,
+        description:"Selected petals of Sakura trees to make a soft fragrant tea",
+        price:388,
+        img: sakura,
+        category:"TeaStrands",
+        categoryId:3,
+        stock: 26,
+    },
+    {
+        id: 24,
+        name: "Cinnamon Tea",
+        strength: 1,
+        description:"Blend of chocolate and cinnamon bark perfect for chilly dark",
+        price:224,
+        img: cinnamon,
+        category:"TeaStrands",
+        categoryId:3,
+        stock: 65,
     },
     //Yerba Mate - ID 31-39
     {
         id: 31,
         name: "Yerba Mate",
         strength: 3,
-        description:"Single-origin coffees made from craft, small-batch roasters. With a more bitter profile, perfect for drinking with a splash of cream",
-        price:200,
-        img:"https://media.istockphoto.com/photos/coffee-cup-concept-message-picture-id825340486?b=1&k=20&m=825340486&s=170667a&w=0&h=xHF4mKNDYr_HGCFBlgEAb7P88X-w8DiHyzwyzG4LMT8=",
+        description:"A type of strand tea that comes from Argentina, healthy and part of every day life",
+        price:284,
+        img: mateO,
         category:"YerbaMate",
         categoryId:2,
-        stock: 40,
+        stock: 41,
     },
     //Accesories - ID 41-49
     {
