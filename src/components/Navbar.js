@@ -3,12 +3,15 @@ import CartWidget from "./CartWidget";
 import Logo from "../img/infuse-logo.png";
 import img from "../img/log-in-icon.png";
 import "../css/styles.css";
+import splatOne from '../img/coffee-stain-one.png'
 
 function Navbar() {
   return (
     <>
       <div className="Wrapper">
-        <div className="Left" />
+        <div className="Left">
+          <img className="stain" src={splatOne} alt="coffee stain"/>
+        </div>
         <div className="Center">
           <Link to="/">
             <img className="logo" src={Logo} alt="logo" />
