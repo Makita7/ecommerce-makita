@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
-// import FormatNumber from "../utilities/FormatNumber";
 
 const Cart = () => {
     const test = useContext(CartContext);
@@ -9,25 +8,25 @@ const Cart = () => {
     return( 
         <>
             <div className="Wrapper">
-                <div className="Left">
+                <div className="Center">
                     <button type="button" className="btn btn-dark" onClick={test.removeList} >Empty Cart</button>
                 </div>
                 <div className="Center">
-                    <h3 className="text-center">Hi I'm your Cart</h3>
+                    <h3 className="text-center">Shopping Bag</h3>
                 </div>
                 <div className="Center">
                     <Link to='/'><div type="button" className="btn btn-dark">Continue Shopping</div></Link>
                 </div>
             </div>
             <div className="">
-                <div className="Wrapper">
+                <div className="Wrapper Center">
                 {
                     test.cartList.length > 0
                     
                     ? 
                     test.cartList.map(item => 
                     <div key={`key${item.idItem}`}>
-                        <div className='card-body'>
+                        <div className='card-body text-center'>
                             <div className="cartImg"><img src={item.imgItem} alt={item.nameItem} className="cartImg"/></div>
                             <p>Product: {item.nameItem}</p>
                             <p>{item.qtyItem} product(s)</p>
@@ -38,7 +37,7 @@ const Cart = () => {
                     )
 
                     :
-                    <div><h5 className="text-center">Empty</h5></div>
+                    <div className="Center"><h5 className="text-center price">Empty (▱˘︹˘▱)</h5></div>
                     }
                 </div>
 
@@ -48,11 +47,12 @@ const Cart = () => {
                     {
                     test.cartList.length > 0 &&
                         <div>
-                            <h3>ORDER SUMMARY</h3>
-                            <table className="table">
+                            <h3 className="text-center">ORDER SUMMARY</h3>
+                            <table className="table text-center">
                                 <thead>
                                     <tr>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Quantity of Products</th>
                                     <th scope="col">Tax</th>
                                     <th scope="col">Total</th>
                                     </tr>
@@ -60,13 +60,16 @@ const Cart = () => {
                                 <tbody>
                                     <tr>
                                     <th scope="row">{test.calcSubTotal()}</th>
+                                    <td>{test.calcItemsQty()}</td>
                                     <td>{test.calcTax()}</td>
                                     <td>{test.calcTotal() + test.calcTax()}</td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br/>
-                            <button type="button" className="btn btn-dark m-4">Go to Checkout</button>
+                            <div className="Center">
+                                <button type="button" className="btn btn-dark m-4">Go to Checkout</button>
+                            </div>
                         </div>
                 }
             </div>

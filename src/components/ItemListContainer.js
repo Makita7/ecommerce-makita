@@ -24,7 +24,7 @@ const ItemListContainer = () => {
   return (
     <>
       <div className="container">
-        <div className="row d-flex flex-wrap">
+        <div className="row d-flex flex-wrap Center">
           <ItemList items={data} />
         </div>
       </div>

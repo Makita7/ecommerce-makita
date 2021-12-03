@@ -21,7 +21,9 @@ const CartContextProvider = ({ children }) => {
     } else {
       //to raise the amount instead of showing duplicates
       found.qtyItem += qty;
-
+      setCartList([
+        ...cartList
+    ]);
     }
   };
 

@@ -1,17 +1,27 @@
+//capsules
 import capLatte from '../img/Capsule_Latte.png'
 import capHazel from '../img/Capsule_Hazel_Mokka.png'
 import capMokka from '../img/Capsule_Mokka.png'
 import capVani from '../img/Capsule_Vanilla.png'
 import capCapu from '../img/Capsule_Capuccino.png'
+//coffee grains
 import cofArabica from '../img/coffee_Arabica.png'
 import cofExcelsa from '../img/coffee_Excelsa.png'
 import cofLiberica from '../img/coffee_Liberica.png'
 import cofRobusta from '../img/coffee_Robusta.png'
+//tea strands
 import berry from '../img/tea-berries.png'
 import cinnamon from '../img/tea-cinnamon.png'
 import green from '../img/tea-green.png'
 import sakura from '../img/tea-sakura.png'
+//yerba mate
 import mateO from '../img/mate-original.png'
+import mateC from '../img/mate-citrico.png'
+import mateM from '../img/mate-menta.png'
+//Accesories
+import FrenchPress from '../img/frenchPress.jpg'
+import ItalianPress from '../img/italianPress.jpg'
+import Mate from '../img/mate.jpg'
 
 
 const products = [
@@ -173,23 +183,67 @@ const products = [
     //Yerba Mate - ID 31-39
     {
         id: 31,
-        name: "Yerba Mate",
-        strength: 3,
-        description:"A type of strand tea that comes from Argentina, healthy and part of every day life",
-        price:284,
+        name: "Mate Original",
+        strength: 4,
+        description:"Yerba Mate sola sin ningun otro agregado",
+        price:200,
         img: mateO,
         category:"YerbaMate",
         categoryId:2,
-        stock: 41,
+        stock: 28,
+    },
+    {
+        id: 32,
+        name: "Mate Menta",
+        strength: 3,
+        description:"Yerba mate con hojas de Menta",
+        price:150,
+        img: mateM,
+        category:"YerbaMate",
+        categoryId:2,
+        stock: 24,
+    },
+    {
+        id: 33,
+        name: "Mate Citrico",
+        strength: 2,
+        description:"Yerba Mate con cascaras de pomelo, limon y naranza.",
+        price:168,
+        img: mateC,
+        category:"YerbaMate",
+        categoryId:2,
+        stock: 22,
     },
     //Accesories - ID 41-49
     {
         id: 41,
         name: "French Press",
         roast: "dark",
-        description:"used for",
-        price:2500,
-        img:"https://i5.walmartimages.ca/images/Enlarge/479/547/6000199479547.jpg",
+        description:"Used for infusing coffee or tea strands, which ever is to your liking",
+        price:3000,
+        img: FrenchPress,
+        category:"Accesories",
+        categoryId:5,
+        stock: 31,
+    },
+    {
+        id: 42,
+        name: "Mate Stanley",
+        roast: "dark",
+        description:"Used for infusing Yerba Mate",
+        price:3500,
+        img: Mate,
+        category:"Accesories",
+        categoryId:5,
+        stock: 31,
+    },
+    {
+        id: 43,
+        name: "Italian Press",
+        roast: "dark",
+        description:"Used for preparing the most delicious coffees",
+        price:4000,
+        img: ItalianPress,
         category:"Accesories",
         categoryId:5,
         stock: 31,

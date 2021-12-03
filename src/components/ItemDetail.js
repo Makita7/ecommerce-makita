@@ -10,7 +10,6 @@ const ItemDetail = ({ item, stock = 0 }) => {
     const test = useContext(CartContext);
 
     const onAdd = (qty) => {
-        
         alert("You have selected " + qty + " items.");
         setItemCount(qty);
         test.addToCart(item, qty);
@@ -23,7 +22,7 @@ const ItemDetail = ({ item, stock = 0 }) => {
                 ? //if
                 <p className="text-center">loading...</p> 
                 : //else
-                <div key={item.id} className="d-flex align-items-center text-center p-4 ">
+                <div key={item.id} className="d-flex align-items-center text-center p-4 Center">
                     <div className="prodCard">
                         <div className='card'>
                             <img src={item.img} className=" img-thumbnail" alt={item.name}/>
@@ -31,6 +30,7 @@ const ItemDetail = ({ item, stock = 0 }) => {
                                 <h5 className="card-title">{item.name}</h5>
                                 <p className="card-text">{item.description}</p>
                                 <p>Stock: {item.stock}</p>
+                                <p className="price">Price: ${item.price}</p>
                                 <br/>
                             </div>
                         </div>

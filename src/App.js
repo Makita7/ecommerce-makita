@@ -8,6 +8,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
+import HeaderImg from "./img/header-img.png";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <header className="dropshadow">
           <Navbar />
         </header>
-
+        <section>
+          <img className="img-fluid" src={HeaderImg} alt="headerImg"/>
+        </section>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:idCategory" element={<ItemListContainer />} />

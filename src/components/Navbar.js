@@ -27,7 +27,7 @@ function Navbar() {
       </div>
 
       <div className="Wrapper">
-        <div className="Center">
+        <div className="Center navbar">
           <Link to="/category/CoffeeCapsules" className="nav-link">
             Coffee Capsules
           </Link>
