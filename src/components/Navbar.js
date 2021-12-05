@@ -43,8 +43,8 @@ function Navbar() {
           <Link to="/category/YerbaMate" className="nav-link">
             Yerba Mate
           </Link>
-          <Link to="/category/Accesories" className="nav-link">
-            Accesories
+          <Link to="/category/Accessories" className="nav-link">
+            Accessories
           </Link>
         </div>
       </div>
