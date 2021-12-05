@@ -8,7 +8,8 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
-import HeaderImg from "./img/header-img.png";
+import HeaderImg from "./img/header-img.png"; 
+import {firestoreFetch} from './utilities/firestoreFetch';1
 
 function App() {
   return (

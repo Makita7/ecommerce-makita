@@ -1,6 +1,7 @@
 //Firebase
 import db from './firebaseConfig';
-import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
+import { collection, getDocs, query, orderBy, where } from "@firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 const firestoreFetch = async (idCategory) => {
     let Q;
@@ -20,3 +21,17 @@ const firestoreFetch = async (idCategory) => {
 } 
 
 export default firestoreFetch;
+
+// export const firestoreFetchOne = async (idItem) => {
+//     const docRef = doc(db, "products", idItem);
+//     const docSnap = await getDoc(docRef);
+    
+//     if (docSnap.exists()) {
+//         return {
+//             id: idItem,
+//             ...docSnap.data()
+//         }
+//     } else {
+//         console.log("No info found!");
+//     }
+// }
