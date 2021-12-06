@@ -5,7 +5,7 @@ import { CartContext } from './CartContext';
 import '../css/styles.css';
 
 
-const ItemDetail = ({ item, stock = 0 }) => {
+const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
     const test = useContext(CartContext);
 
