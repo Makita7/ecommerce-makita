@@ -1,7 +1,7 @@
 import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router"; 
-import firestoreFetch from "../utilities/firestoreFetch";
+import { firestoreFetch } from "../utilities/firestoreFetch";
 
 
 const ItemListContainer = () => {
@@ -15,13 +15,6 @@ const ItemListContainer = () => {
       .then(result => setData(result))
       .catch(err => console.log(err));
   }, [idCategory]);
-
-  //Unmount
-  // useEffect(() => {
-  //   return (() => {
-  //       setData([]);
-  //   })
-  // }, []);
 
   return (
     <>

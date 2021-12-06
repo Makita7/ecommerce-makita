@@ -1,9 +1,54 @@
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from '@firebase/firestore';
+import db from '../utilities/firebaseConfig';
 
 const Cart = () => {
     const test = useContext(CartContext);
+
+    const makeOrder = () => {
+        let order = {
+            buyer: {
+                name: "Julieta",
+                lastName: "Beamonte",
+                email: "ju-b@gmail.com",
+                phone: "2616459751"
+                },
+                products: test.calcItemsQty(),
+                tax: test.calcTax(),
+                total: test.calcTotal(),
+                items: test.cartList.map(item => ({
+                    id: item.idItem,
+                    title: item.nameItem,
+                    price: item.priceItem,
+                    qty: item.qtyItem
+                })),
+                date: serverTimestamp()
+            };
+
+        const createOrder = async () => {
+            const newOrder = doc(collection(db, "orders"));
+            await setDoc(newOrder, order);
+            return newOrder;
+            }
+            
+            createOrder()
+            .then(result => alert('Your order has been added. Please save the ID of your order \n\n\n Order ID: ' + result.id + '\n\n You will soon receive an email,\n Thank you for your purchase!'))
+            .catch(err => console.log(err));
+        
+            
+            test.cartList.forEach(async(item) => {
+                const itemRef = doc(db, "products", item.idItem);
+                await updateDoc(itemRef, {
+                    stock: increment(-item.qtyItem)
+                });
+            });
+
+            //it goes after the stock check because otherwise it has nothing to check
+            test.removeList();
+
+        }
     
     return( 
         <>
@@ -68,7 +113,7 @@ const Cart = () => {
                             </table>
                             <br/>
                             <div className="Center">
-                                <button type="button" className="btn btn-dark m-4">Go to Checkout</button>
+                                <button type="button" className="btn btn-dark m-4" onClick={makeOrder} >Go to Checkout</button>
                             </div>
                         </div>
                 }
