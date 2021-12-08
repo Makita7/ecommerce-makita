@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from './CartContext';
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from '@firebase/firestore';
 import db from '../utilities/firebaseConfig';
+import Swal from "sweetalert2";  
 
 const Cart = () => {
     const test = useContext(CartContext);
@@ -34,7 +35,7 @@ const Cart = () => {
             }
             
             createOrder()
-            .then(result => alert('Your order has been added. Please save the ID of your order \n\n\n Order ID: ' + result.id + '\n\n You will soon receive an email,\n Thank you for your purchase!'))
+            .then(result => Swal.fire('Your order has been added. Please save the ID of your order' , ' Order ID: ' + result.id ))
             .catch(err => console.log(err));
         
             

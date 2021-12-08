@@ -23,10 +23,8 @@ export const firestoreFetch = async (idCategory) => {
 // export default firestoreFetch;
 
 export const firestoreFetchOne = async (idItem) => {
-    console.log(idItem);
     const docRef = doc(db, "products", idItem);
     const docSnap = await getDoc(docRef);
-    console.log(docSnap.exists());
     
     if (docSnap.exists()) {
         return {

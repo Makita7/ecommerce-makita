@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import {Link} from "react-router-dom";
 import { CartContext } from './CartContext';
 import '../css/styles.css';
+import Swal from "sweetalert2";  
 
 
 const ItemDetail = ({ item }) => {
@@ -10,7 +11,7 @@ const ItemDetail = ({ item }) => {
     const test = useContext(CartContext);
 
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+        Swal.fire("You have selected " + qty + " items.");
         setItemCount(qty);
         test.addToCart(item, qty);
     }
