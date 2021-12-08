@@ -13,7 +13,7 @@ React Js, HTML, CSS, Bootstrap 5, and Git
 
 ## Video
 
-![App Video](https://firebasestorage.googleapis.com/v0/b/ecommerce-infuse.appspot.com/o/Using%20App-1.m4v?alt=media&token=91ee80ce-dd19-4e38-902c-e2d7223a44a2)
+![App screenshot](https://firebasestorage.googleapis.com/v0/b/ecommerce-infuse.appspot.com/o/screenshot.jpg?alt=media&token=40aa7d2f-d33c-4088-81a7-b2a80d4069a6)
 
 
 ## Run Locally
